@@ -90,7 +90,7 @@ public class ProductService
 				if(isOnReceipt==false){receiptList.add(productList.get(i));}
 		}
 		
-		//finally prints receipt
+		//finally prints the receipt
 		for(Product receipt: receiptList) 
 		{
 			//perfects the printing. Example only wants special quantity format print if quantity is > 1
