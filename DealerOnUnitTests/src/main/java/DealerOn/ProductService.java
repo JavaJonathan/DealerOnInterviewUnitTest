@@ -95,10 +95,10 @@ public class ProductService
 		{
 			//perfects the printing. Example only wants special quantity format print if quantity is > 1
 			if(receipt.getCount()==1) {
-				System.out.println(receipt.getName() + " : " + receipt.getPrice());
+				System.out.printf(receipt.getName() + " : " + "%.2f" +"\n", receipt.getPrice());
 			} else {
-			System.out.println(receipt.getName() + " : " + receipt.getPrice()*receipt.getCount() + 
-					" (" + receipt.getCount() + " @ " + receipt.getPrice() + ")");
+			System.out.printf(receipt.getName() + " : " + "%.2f" + " (" + receipt.getCount() + " @ " + "%.2f" + ")" +"\n"
+					, receipt.getPrice()*receipt.getCount(), receipt.getPrice());
 			}
 			
 			//multiplies the price of the item by the count on the order
