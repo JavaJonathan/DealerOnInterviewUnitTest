@@ -57,8 +57,8 @@ public class ProductService
 			importTax = Math.ceil(importTax);
 			importTax = importTax/20;
 			
-			//stores sales taxes added onto each item, excludes importTax
-			totalTaxes = totalTaxes + itemTax;
+			//stores sales taxes added onto each item
+			totalTaxes = totalTaxes + itemTax + importTax;
 			
 			return Double.valueOf(df.format(price+itemTax+importTax));
 		
